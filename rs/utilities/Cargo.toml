@@ -1,0 +1,12 @@
+[package]
+name = "utilities"
+version = "0.0.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+getrandom = { version = "0.2.7", features = ["js"] }
+sp-core = "6.0"
+wasm-bindgen = "0.2.83"

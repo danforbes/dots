@@ -1,0 +1,19 @@
+[package]
+name = "account"
+version = "0.0.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+base58 = "0.2.0"
+blake2-rfc = "0.2.18"
+hmac = "0.12.1"
+getrandom = { version = "0.2.7", features = ["js"] }
+pbkdf2 ={ version = "0.11.0", default-features = false }
+sha2 = "0.10.5"
+schnorrkel ={ version = "0.10.2", features = ["preaudit_deprecated", "u64_backend"]}
+ss58-registry = "1.29.0"
+tiny-bip39 = { version = "1.0", default-features = false }
+wasm-bindgen = "0.2.83"

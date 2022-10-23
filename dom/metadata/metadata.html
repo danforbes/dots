@@ -1,0 +1,127 @@
+<style>
+  * {
+    font-family: monospace;
+  }
+
+  details summary {
+    cursor: pointer;
+  }
+
+  hr.light {
+    border-top: 1px dotted lightgray;
+  }
+
+  .h1 {
+    font-size: 2em;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+  }
+
+  .h2 {
+    font-size: 1.5em;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+  }
+
+  .h3 {
+    font-size: 1.17em;
+    margin-top: 0.75em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+  }
+  .h4 {
+    margin-top: 1.33em;
+    margin-bottom: 1.33em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+  }
+</style>
+<template id="pallet">
+  <details>
+    <summary id="name" class="h1"></summary>
+    <details id="constants">
+      <summary id="name" class="h2">Constants</summary>
+    </details>
+    <details id="storage-items">
+      <summary id="name" class="h2">Storage Items</summary>
+    </details>
+    <details id="events">
+      <summary id="name" class="h2">Events</summary>
+    </details>
+    <details id="errors">
+      <summary id="name" class="h2">Errors</summary>
+    </details>
+    <details id="calls">
+      <summary id="name" class="h2">Calls</summary>
+    </details>
+  </details>
+</template>
+
+<template id="constant">
+  <details>
+    <summary id="name" class="h3"></summary>
+    <br />
+    <span id="docs"></span>
+    <br />
+    <span id="type"></span>
+    <h4 id="value-header">Value</h4>
+    <ul id="value"></ul>
+  </details>
+</template>
+
+<template id="storage-item">
+  <details>
+    <summary id="name" class="h3"></summary>
+    <br />
+    <span id="docs"></span>
+    <br />
+    <span id="type"></span>
+    <br />
+    <form id="query-form">
+      <button id="query" type="submit">Query</button>
+    </form>
+    <ul id="value"></ul>
+  </details>
+</template>
+
+<template id="event">
+  <details>
+    <summary id="name" class="h3"></summary>
+    <br />
+    <span id="docs"></span>
+    <h4>Fields</h4>
+    <ul id="fields"></ul>
+  </details>
+</template>
+
+<template id="error">
+  <details>
+    <summary id="name" class="h3"></summary>
+    <br />
+    <span id="docs"></span>
+  </details>
+</template>
+
+<template id="call">
+  <details>
+    <summary id="name" class="h3"></summary>
+    <br />
+    <span id="docs"></span>
+    <h4>Fields</h4>
+    <ul id="fields"></ul>
+    <form id="call-form">
+      <button id="call" type="submit">Call</button>
+    </form>
+    <br />
+    <br />
+    <div id="status"></div>
+  </details>
+</template>

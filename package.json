@@ -1,0 +1,29 @@
+{
+  "name": "dots",
+  "version": "0.0.0",
+  "description": "Demonstrational & educational project to showcase interactions with Substrate- and FRAME-based blockchains",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "build:account": "wasm-pack build -t web -d ../../lib/wasm/account ./rs/account",
+    "build:metadata": "wasm-pack build -t web -d ../../lib/wasm/metadata ./rs/metadata",
+    "build:utilities": "wasm-pack build -t web -d ../../lib/wasm/utilities ./rs/utilities",
+    "build:wasm": "npm run build:account && npm run build:metadata && npm run build:utilities",
+    "fmt": "npm run prettier && cargo fmt --all --manifest-path ./rs/Cargo.toml",
+    "prettier": "./node_modules/.bin/prettier --ignore-path ./.gitignore --prose-wrap always -w .",
+    "start": "./node_modules/.bin/live-server"
+  },
+  "keywords": [
+    "Polkadot",
+    "Substrate",
+    "FRAME",
+    "Web Components",
+    "Wasm"
+  ],
+  "author": "Dan Forbes <dan@danforbes.dev>",
+  "license": "CC-BY-SA-4.0",
+  "devDependencies": {
+    "live-server": "^1.1.0",
+    "prettier": "^2.7.1"
+  }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <title>dots</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        font-size: 0.4rem;
+      }
+
+      @media (min-width: 420px) {
+        body {
+          font-size: 0.5rem;
+        }
+      }
+
+      @media (min-width: 530px) {
+        body {
+          font-size: x-small;
+        }
+      }
+
+      @media (min-width: 590px) {
+        body {
+          font-size: small;
+        }
+      }
+
+      @media (min-width: 665px) {
+        body {
+          font-size: medium;
+        }
+      }
+
+      @media (min-width: 800px) {
+        body {
+          font-size: large;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <dots-app></dots-app>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
